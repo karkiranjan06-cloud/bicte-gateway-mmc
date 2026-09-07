@@ -11,6 +11,7 @@ export const SEMESTERS: Semester[] = [
     courses: [
       "Compulsory English I",
       "Compulsory Nepali I",
+      "Mathematics I",
       "Programming in C",
       "Fundamentals of IT",
       "Foundations of Education",
@@ -22,6 +23,7 @@ export const SEMESTERS: Semester[] = [
     courses: [
       "Compulsory English II",
       "Compulsory Nepali II",
+      "Mathematics II",
       "Object-Oriented Programming (OOP)",
       "Data Structures & Algorithms",
       "Educational Psychology",
