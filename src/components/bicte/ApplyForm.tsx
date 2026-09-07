@@ -44,11 +44,18 @@ export function ApplyForm() {
 
   const submit = (e: React.FormEvent) => {
     e.preventDefault();
-    if (!form.fullName.trim()) return toast.error("Please enter your full name.");
-    if (!/^\d{10}$/.test(form.phone.trim()))
-      return toast.error("Phone number must be 10 digits (e.g. 98XXXXXXXX).");
-    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email.trim()))
-      return toast.error("Please enter a valid email address.");
+    if (!form.fullName.trim()) {
+      toast.error("Please enter your full name.");
+      return;
+    }
+    if (!/^\d{10}$/.test(form.phone.trim())) {
+      toast.error("Phone number must be 10 digits (e.g. 98XXXXXXXX).");
+      return;
+    }
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email.trim())) {
+      toast.error("Please enter a valid email address.");
+      return;
+    }
 
     const lead: Lead = {
       id: `${Date.now()}-${Math.random().toString(36).slice(2, 8)}`,
